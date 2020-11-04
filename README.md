@@ -17,13 +17,13 @@ Create a web-application using React as presented below.
 1. Clone the repository
 
 ```bash
-git clone https://github.com/Achiaga/Frontend-Interview-Questions.git
+git clone https://github.com/Achiaga/check-in-challenge.git
 ```
 
 2. Change the working directory
 
 ```bash
-cd frontend-assignment-alfonso/
+cd check-in-challenge/
 ```
 
 3. Install dependencies
