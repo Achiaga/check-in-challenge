@@ -35,11 +35,8 @@ const FormContent = ({ activeStep, stepsLength, setActiveStep }) => {
 
 	const handleNext = async (e) => {
 		e.preventDefault();
-		if (activeStep === 1) {
-			await requestCheckInApi(checkInStatus, setCheckInStatus);
-		}
-		if (activeStep === 2) {
-			await requestCheckInApi(checkInStatus, setCheckInStatus);
+		if (activeStep === 0 || activeStep === 2) {
+			await requestCheckInApi(checkInStatus, setCheckInStatus, activeStep);
 		}
 		return setActiveStep(activeStep + 1);
 	};

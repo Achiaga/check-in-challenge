@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import CompleteForm from './complete-form';
@@ -21,7 +21,10 @@ const InfoForm = ({ customForm, passengerInfo, handlePassengerInput }) => {
 		Greece: GreeceText,
 	}[customForm];
 
-	console.log(passengerInfo);
+	const completeFormFields = {
+		...defaultTextFields,
+		...(getCustomForm && { ...getCustomForm }),
+	};
 
 	return (
 		<>
@@ -30,10 +33,7 @@ const InfoForm = ({ customForm, passengerInfo, handlePassengerInput }) => {
 			</Typography>
 			<Grid container spacing={3}>
 				<CompleteForm
-					defaultTextFields={{
-						...defaultTextFields,
-						...(getCustomForm && { ...getCustomForm }),
-					}}
+					completeFormFields={completeFormFields}
 					handlePassengerInput={handlePassengerInput}
 					passengerInfo={passengerInfo}
 				/>

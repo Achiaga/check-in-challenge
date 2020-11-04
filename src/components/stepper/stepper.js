@@ -14,9 +14,9 @@ const StepperComponent = ({ activeStep, steps }) => {
 	const classes = useStyles();
 	return (
 		<Stepper activeStep={activeStep} className={classes.stepper}>
-			{steps.map((label) => (
-				<Step key={label}>
-					<StepLabel>{label}</StepLabel>
+			{steps.map((stepLabel) => (
+				<Step key={stepLabel}>
+					<StepLabel>{stepLabel}</StepLabel>
 				</Step>
 			))}
 		</Stepper>

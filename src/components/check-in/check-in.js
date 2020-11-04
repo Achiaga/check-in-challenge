@@ -12,6 +12,7 @@ const CheckIn = ({ handlePassengerInput, passengerInfo }) => {
 			<Grid container spacing={3}>
 				<Grid item xs={12} md={6}>
 					<TextField
+						data-testid='flight-number-input-id'
 						id='flight_number'
 						label='flight number'
 						fullWidth
@@ -24,9 +25,10 @@ const CheckIn = ({ handlePassengerInput, passengerInfo }) => {
 				</Grid>
 				<Grid item xs={12} md={6}>
 					<TextField
-						required
+						data-testid='last-name-input-id'
 						onChange={handlePassengerInput}
 						value={passengerInfo['last_name'] || ''}
+						required
 						id='last_name'
 						label='last name'
 						type='text'

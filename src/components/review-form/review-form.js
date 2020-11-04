@@ -17,8 +17,8 @@ const ReviewForm = ({ passengerInfo }) => {
 				<Grid item container direction='column'>
 					<Grid container>
 						{Object.entries(passengerInfo).map(
-							([pass, passengerInfoItem], index) => {
-								const newLabel = normalizeLabel(pass);
+							([label, passengerInfoItem], index) => {
+								const newLabel = normalizeLabel(label);
 								return (
 									<React.Fragment key={index}>
 										<Grid item xs={6} sm={6}>
